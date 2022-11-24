@@ -1,0 +1,23 @@
+.macbook-commercial-block {
+    background: #000000 ;
+    position: relative;
+    z-index: 5;
+    max-width: 100%;
+  }
+  .macbook-commercial-block__content {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .macbook-commercial-block__container {
+  }
+  @media (max-width: 1067px) {
+    .macbook-commercial-block {
+      background: #000000;
+    }
+    .macbook-commercial-block__content {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  
+  }
+  

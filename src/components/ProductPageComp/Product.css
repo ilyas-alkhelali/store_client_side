@@ -1,0 +1,10 @@
+.product-block__content {
+    display: flex;
+    padding: 200px 0px 0px 0px;
+  }
+  @media (max-width: 992px) {
+    .product-block__content {
+      flex-direction: column;
+    }
+  }
+  

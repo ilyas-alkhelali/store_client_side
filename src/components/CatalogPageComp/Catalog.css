@@ -1,0 +1,22 @@
+.catalog-block {
+    margin: 0 auto;
+    padding: 140px 0px 120px 0px;
+  }
+  ._loader {
+  display: flex;
+  justify-content: center;
+  padding: 70px 0px 0px 0px;
+  }
+  .catalog-block__container {
+  }
+  .catalog-block__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 594px) {
+    .catalog-block {
+      padding: 100px 0px 120px 0px;
+    }
+  }
+  

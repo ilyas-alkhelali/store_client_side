@@ -1,0 +1,22 @@
+.main {
+    position: relative;
+    background: linear-gradient(275.26deg, #647262 1.34%, #262625 96.45%);
+    width: 100%;
+  }
+  .main__main-block {
+    
+  }
+  .main-block {
+    
+  }
+  .main-block__text-block {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media (max-width: 912px) {
+    .main-block__text-block {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  

@@ -1,0 +1,20 @@
+.iphone-promo-block {
+    position: relative;
+    z-index: 3;
+    background: #1f211f url(../../../pictures/Vector.png) 0 0 / auto 100%
+      no-repeat;
+  }
+  .iphone-promo-block__container {
+    display: flex;
+  }
+  @media (max-width: 912px) {
+    .iphone-promo-block__container {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .iphone-promo-block {
+  
+      background: #1f211f;
+    }
+  }
+  

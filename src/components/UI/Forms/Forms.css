@@ -1,0 +1,37 @@
+.form-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    letter-spacing: 0.055em;
+  }
+  .form-block__title {
+    padding: 10px 0px;
+    font-size: 40px;
+  }
+  .from-block__form-group {
+    padding: 5px 0px;
+  }
+  .form-group__input {
+  }
+  .form-block__form-buttom {
+    padding: 40px 0px 15px 0px;
+  }
+  .form-button__button {
+    border-radius: 57px;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+  }
+  .form-button__button:hover {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+  }
+  .form-button__button:active {
+    transform: scale(0.8);
+  }
+  

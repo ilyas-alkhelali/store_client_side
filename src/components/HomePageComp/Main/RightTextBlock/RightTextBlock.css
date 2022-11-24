@@ -1,0 +1,93 @@
+.text-block__right-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    padding: 176px 0px 0px 0px;
+  }
+  .right-block__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.015em;
+  }
+  .right-block__title_bold {
+    padding: 0px 16px 0px 0px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .right-block__huge-text {
+    font-weight: 900;
+    text-shadow: 11px 12px 14px rgba(0, 0, 0, 0.25);
+    font-size: 120px;
+    line-height: 147px;
+    letter-spacing: 0.015em;
+    color: rgba(148, 174, 148, 0.25);
+  }
+  .right-block__link {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s;
+    
+  }
+  .right-block__link:hover {
+    color: black;
+  }
+  
+  .images-block {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .images-block__right-image {
+    margin: 40px 0px 40px 0px;
+    align-self: center;
+    display: block;
+    position: relative;
+    z-index:1;
+    width: 70%;
+    transform: translate(200%, 100%);
+  }
+  .images-block__right-image_visible{
+    animation-name: iphoneAppear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes iphoneAppear {
+    0% {
+      transform: translate(200%, 100%);
+    }
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }
+  
+  @media (max-width: 912px) {
+    .text-block__right-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .right-block__title {
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+    .right-block__link {
+      display: flex;
+      justify-content: center;
+    }
+    .right-block__huge-text {
+      font-size: 100px;
+    }
+  }
+  
+  

@@ -1,0 +1,42 @@
+.iphone-text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .iphone-text-block__title {
+    padding: 189px 0px 67px 0px;
+    font-size: 40px;
+    line-height: 163.4%;
+  
+    letter-spacing: 0.015em;
+  }
+  .iphone-text-block__subtitle {
+    padding: 0px 0px 105px 0px;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 0.015em;
+  }
+  .iphone-text-block__button {
+    margin: 0px 0px 82px 0px;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.015em;
+    display: flex;
+    justify-content: center;
+  }
+  .iphone-button__content {
+    border: 3px solid white;
+    padding: 15px 40px;
+    border-radius: 57px;
+    transition: 0.5s;
+  }
+  .iphone-button__content:hover {
+    background-color: white;
+    color: black;
+    font-weight: 700;
+  }
+  .iphone-button__content:active {
+    transform: scale(0.8);
+  }

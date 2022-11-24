@@ -1,0 +1,67 @@
+.iphone-images-block {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .iphone-images-block__item {
+    width: 20%;
+    height: 60%;
+    position: relative;
+    bottom: 0;
+    transform: translate(0%, 150%);
+  }
+  .iphone-images-block__item_visible {
+    animation: iphone-from-bootom 0.8s;
+    animation-fill-mode: forwards;
+  }
+  .iphone-images-block__item_big {
+    width: 25%;
+    height: 70%;
+    position: relative;
+    bottom: 0;
+    transform: translate(0%, 150%);
+  }
+  .iphone-images-block__item_big_visible {
+    animation: iphone-from-bootom 1.8s;
+    animation-fill-mode: forwards;
+  }
+  .iphone-images-block__item_2-items {
+    width: 30%;
+    height: 60%;
+    position: relative;
+    bottom: 0;
+    transform: translate(0%, 150%);
+  }
+  .iphone-images-block__item_2-items_visible {
+    animation: iphone-from-bootom 1.3s;
+    animation-fill-mode: forwards;
+  }
+  @media (max-width: 912px) {
+    .iphone-images-block {
+      position: relative;
+      left: -15px;
+      background: url(../../../../pictures/Vector.png) 0 0 / auto 100% no-repeat;
+    }
+    .iphone-images-block__item {
+      width: 12%;
+      height: 15%;
+    }
+    .iphone-images-block__item_big {
+      width: 15%;
+      height: 30%;
+     
+    }
+    .iphone-images-block__item_2-items {
+      width: 16%;
+      height: 30%;
+  
+    }
+  }
+  @keyframes iphone-from-bootom {
+    0% {
+      transform: translate(0%, 150%);
+    }
+    100% {
+      transform: translate(0%, 0%);
+    }
+  }

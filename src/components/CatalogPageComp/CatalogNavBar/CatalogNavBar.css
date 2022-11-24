@@ -1,0 +1,29 @@
+.catalog-navbar {
+    color: #000000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .catalog-navbar__title {
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 69px;
+    letter-spacing: 0.015em;
+  }
+  ._icon-click {
+    transition: 0.5s;
+    border-radius: 57px;
+    padding: 10px;
+  }
+  ._icon-click:hover {
+    border-radius: 57px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  ._icon-click:active {
+    border-radius: 57px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  

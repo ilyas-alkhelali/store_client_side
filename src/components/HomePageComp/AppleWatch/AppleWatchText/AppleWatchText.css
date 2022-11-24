@@ -1,0 +1,38 @@
+.apple-watch-commercial__text-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px 102px 0px;
+  }
+  .apple-watch-commercial__text-block_text {
+    text-align: center;
+  }
+  .apple-watch-commercial__text-block_title {
+    font-size: 60px;
+    line-height: 69px;
+    letter-spacing: 0.015em;
+  }
+  
+  .apple-watch-commercial__text-block_subtitle {
+    font-weight: 300;
+    font-size: 33px;
+    line-height: 38px;
+    letter-spacing: 0.015em;
+  
+    color: #ff0000;
+  }
+  .apple-watch-commercial__text-block_icon {
+    padding: 0px 30px;
+    transition: 0.5s;
+  }
+  .apple-watch-commercial__text-block_icon:hover {
+    color: #ff0000;
+  }
+  @media (max-width: 400px) {
+    .apple-watch-commercial__text-block {
+      flex-direction: column;
+    }
+    .apple-watch-commercial__text-block_icon {
+      padding: 20px 0px;
+    }
+  }

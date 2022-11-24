@@ -1,0 +1,13 @@
+.navbar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  .navbar__container {
+    display: flex;
+    align-items: center;
+    min-height: 146px;
+  }
+  

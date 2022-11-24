@@ -1,0 +1,82 @@
+.macbook-commercial-block__macbook-text-block {
+    display: flex;
+    flex-direction: column;
+  }
+  .macbook-text-block__pretitle {
+    padding: 90px 0px 0px 0px;
+    font-weight: 300;
+    font-size: 31px;
+    line-height: 36px;
+    letter-spacing: 0.015em;
+  }
+  .macbook-text-block__title {
+    padding: 14px 0px 0px 0px;
+    font-size: 50px;
+    line-height: 69px;
+    letter-spacing: 0.015em;
+  }
+  .macbook-text-block__subtitle {
+    padding: 27px 0px 0px 0px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 46px;
+    letter-spacing: 0.015em;
+  }
+  .macbook-text-block__linked-text {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 40px 0px 92px 0px;
+  }
+  .macbook-text-block__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 15;
+    padding: 20px 40px;
+    margin: 10px 0px 10px 0px;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.015em;
+    border: 3px solid #de4686;
+    background: #de4686;
+    box-shadow: 0px 4px 41px 3px #df4762;
+    border-radius: 57px;
+    transition: 0.5s;
+  
+  }
+  .macbook-text-block__button:hover {
+    border: 3px solid #de4686;
+    background: none;
+    color: #de4686;
+  }
+  .macbook-text-block__button:active {
+     transform: scale(0.8);
+  }
+  .macbook-text-block__link {
+    padding: 0px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 36px;
+    letter-spacing: 0.015em;
+    color: #de4686;
+    transition: 0.5s;
+  }
+  .macbook-text-block__link:hover {
+   color: white;
+  }
+  .macbook-text-block__link_icon{
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 0px 10px;
+  }
+  @media (max-width: 1067px) {
+    .macbook-commercial-block__macbook-text-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
