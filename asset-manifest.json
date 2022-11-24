@@ -1,13 +1,23 @@
 {
   "files": {
-    "main.css": "/store_client_side/static/css/main.e6ba65de.css",
-    "main.js": "/store_client_side/static/js/main.5fa8c409.js",
+    "main.css": "/store_client_side/static/css/main.602798bb.css",
+    "main.js": "/store_client_side/static/js/main.dd7bd434.js",
+    "static/media/IphonePicture.png": "/store_client_side/static/media/IphonePicture.0fbdf300e3b566f8e4dd.png",
+    "static/media/testPic.png": "/store_client_side/static/media/testPic.ac3f298a8edb5d427a04.png",
+    "static/media/AppleWatchFirst.png": "/store_client_side/static/media/AppleWatchFirst.cdb38dbeff01d1793bc5.png",
+    "static/media/AppleWatchThird.png": "/store_client_side/static/media/AppleWatchThird.7091e5e2d51c77eb46e3.png",
+    "static/media/MacBook.png": "/store_client_side/static/media/MacBook.1fca707b957a640cb2f6.png",
+    "static/media/AppleWatchSecond.png": "/store_client_side/static/media/AppleWatchSecond.21eadb878bd43cb78193.png",
+    "static/media/fifthIPhoneImCommer.png": "/store_client_side/static/media/fifthIPhoneImCommer.419b9ffe03ffa1da4d53.png",
+    "static/media/firstIPhoneImCommer.png": "/store_client_side/static/media/firstIPhoneImCommer.7dcdbbe8f1aa1ffb31e6.png",
+    "static/media/secondIPhoneImCommer.png": "/store_client_side/static/media/secondIPhoneImCommer.54ad66698d19227d779b.png",
+    "static/media/fourthIPhoneImCommer.png": "/store_client_side/static/media/fourthIPhoneImCommer.f33e24e735f63b127e6a.png",
     "index.html": "/store_client_side/index.html",
-    "main.e6ba65de.css.map": "/store_client_side/static/css/main.e6ba65de.css.map",
-    "main.5fa8c409.js.map": "/store_client_side/static/js/main.5fa8c409.js.map"
+    "main.602798bb.css.map": "/store_client_side/static/css/main.602798bb.css.map",
+    "main.dd7bd434.js.map": "/store_client_side/static/js/main.dd7bd434.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6ba65de.css",
-    "static/js/main.5fa8c409.js"
+    "static/css/main.602798bb.css",
+    "static/js/main.dd7bd434.js"
   ]
 }
