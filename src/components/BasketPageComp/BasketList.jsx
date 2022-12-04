@@ -3,11 +3,12 @@ import BasketListItem from "./BasketListItem/BasketListItem";
 import "./BasketList.css";
 import ModalWindow from "../UI/ModalWindow/ModalWindow";
 import Confirmation from "./Confirmation/Confirmation";
+import { useNavigate } from "react-router-dom";
 const BasketList = () => {
-  
   const [isBuied, setIsBuied] = useState(false);
   const [cost, setCost] = useState();
   const [basket, setBasket] = useState([]);
+  const goTo = useNavigate();
 
   useEffect(() => {
     const basket = [];
@@ -28,24 +29,30 @@ const BasketList = () => {
   };
   return (
     <div className="basket-block__container _container">
-      <div className="basket-block__content">
-        {basket.map((product) => (
-          <div key={product.id}>
-            <BasketListItem product={product} remove={remove} />
-          </div>
-        ))}
-        <div className="basket-block__bottom-text">
-          <div className="basket-block__price-block">It costs {cost} $</div>
-          <div className="basket-block__button-block">
-            <div
-              className="basket-block__button"
-              onClick={() => setIsBuied(true)}
-            >
-              buy
+      {basket.length == 0 ? (
+        <div className="basket-block__no-prod">
+          <div className="np-prod__text" onClick={() => goTo("/store_client_side/catalog")}>your cart is empty, let's go shopping</div>
+        </div>
+      ) : (
+        <div className="basket-block__content">
+          {basket.map((product) => (
+            <div key={product.id}>
+              <BasketListItem product={product} remove={remove} />
+            </div>
+          ))}
+          <div className="basket-block__bottom-text">
+            <div className="basket-block__price-block">It costs {cost} $</div>
+            <div className="basket-block__button-block">
+              <div
+                className="basket-block__button"
+                onClick={() => setIsBuied(true)}
+              >
+                buy
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
       <ModalWindow isActive={isBuied} setIsActive={setIsBuied}>
         <Confirmation basket={basket} cost={cost} setIsBuied={setIsBuied} />
       </ModalWindow>

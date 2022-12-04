@@ -11,6 +11,7 @@ import {
 } from "../../../fetchHandler/CreateFetchApi";
 import { useFetching } from "../../../customHooks/useFetching";
 import CapacityItem from "./CapacityItem/CapacityItem";
+import { CircularProgress } from "@mui/material";
 
 const RightCorner = ({ product }) => {
   const goTo = useNavigate();
@@ -18,21 +19,24 @@ const RightCorner = ({ product }) => {
   const [chosenCapacity, setChosenCapacity] = useState(128);
   const capacity = [128, 256, 512];
 
-  const [generateRating, isLoading, allError] = useFetching(async () => {
+  const [generateRating, isLoading, error] = useFetching(async () => {
     await CreateFetchApi(controllers.product, actions.generateRating)
       .generateRating(product.id, rating)
       .then((res) => setRating(res.data));
   });
 
   const rate = useMemo(() => {
-    if (rating != undefined && product.id != undefined) {
+    if (rating !== undefined && product.id !== undefined) {
       generateRating();
     }
   }, [rating]);
 
   const buy = () => {
     product.capacity = chosenCapacity;
-    sessionStorage.setItem(product.dateOfAdd, JSON.stringify(product, chosenCapacity));
+    sessionStorage.setItem(
+      product.dateOfAdd,
+      JSON.stringify(product, chosenCapacity)
+    );
     goTo("/store_client_side/basket");
   };
 
@@ -75,17 +79,24 @@ const RightCorner = ({ product }) => {
           className="text-block__subtitle _wihout-underline"
           onClick={() => rate}
         >
-          <Rating
-            name="customized-color"
-            size="large"
-            value={Number(rating)}
-            onChange={(event) => setRating(event.target.value)}
-            precision={0.1}
-            icon={<AppleIcon sx={{ fontSize: 40, color: "rgb(2, 171, 8)" }} />}
-            emptyIcon={
-              <AppleIcon sx={{ fontSize: 40, color: "rgba(0,0,0,0.8)" }} />
-            }
-          />
+          {error && <div className="_error">{error}</div>}
+          {isLoading ? (
+            <div className="_loader"><CircularProgress /></div>
+          ) : (
+            <Rating
+              name="customized-color"
+              size="large"
+              value={Number(rating)}
+              onChange={(event) => setRating(event.target.value)}
+              precision={0.1}
+              icon={
+                <AppleIcon sx={{ fontSize: 40, color: "rgb(2, 171, 8)" }} />
+              }
+              emptyIcon={
+                <AppleIcon sx={{ fontSize: 40, color: "rgba(0,0,0,0.8)" }} />
+              }
+            />
+          )}
         </div>
       </div>
       <div className="text-block__button-block">

@@ -23,7 +23,9 @@ const ProductPage = () => {
       })
       .catch((res) => console.log(res));
   });
+  
   useEffect(() => {
+    window.scrollTo(0, 0);
     getProductById();
   }, []);
 
@@ -31,7 +33,7 @@ const ProductPage = () => {
     <div className="product">
       {error && <div>{error}</div>}
       {isLoading ? (
-        <div><CircularProgress /></div>
+        <div className="_custom_loader _loader"><CircularProgress /></div>
       ) : (
         <>
           <CatalogNavBar>{product.version}</CatalogNavBar>

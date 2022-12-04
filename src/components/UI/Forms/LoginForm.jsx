@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { useFetching } from "../../../customHooks/useFetching";
 import { CircularProgress } from "@mui/material";
 
-const LoginForm = ({ setIsActive }) => {
+const LoginForm = ({ setIsActive, setUserName }) => {
   const [user, setUser] = useState({ email: "", password: "" });
   const { isAuth, setIsAuth } = useContext(AuthContext);
   const goTo = useNavigate();
@@ -21,22 +21,21 @@ const LoginForm = ({ setIsActive }) => {
     await CreateFetchApi(controllers.auth, actions.login)
       .login(user)
       .then((res) => {
+        setUserName(res.data.user.name)
         setIsAuth(true);
         setIsActive(false);
         goTo("/store_client_side");
-        setCookie(3, "jwt", res.data.token);
-        setCookie(3, "user", JSON.stringify(res.data.user.id));
-        setCookie(3, "authenticate", JSON.stringify(true));
+        setCookie(1, "jwt", res.data.token);
+        setCookie(1, "user", JSON.stringify(res.data.user.id));
+        setCookie(1, "authenticate", JSON.stringify(true));
       })
-
-      .catch((res) => console.log(res));
   });
 
   return (
     <>
-      {error && <div className="form-block">{error}</div>}
+      {error && <div className="_error">{error}</div>}
       {isLoading ? (
-        <div>
+        <div className="_loader">
           <CircularProgress />
         </div>
       ) : (

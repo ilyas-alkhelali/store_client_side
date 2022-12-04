@@ -54,7 +54,7 @@ const Confirmation = ({ basket, cost, setIsBuied }) => {
 
   return (
     <>
-      {error && <div className="confirm-block">{error}</div>}
+      {error && <div className="_error">{error}</div>}
       {isLoading 
        ? <div className="confirm-block"><CircularProgress /></div>
        : <div className="confirm-block">

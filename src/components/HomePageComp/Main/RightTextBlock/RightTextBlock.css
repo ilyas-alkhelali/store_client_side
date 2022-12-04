@@ -52,19 +52,27 @@
     position: relative;
     z-index:1;
     width: 70%;
-    transform: translate(200%, 100%);
+    transform: translate(170%, 100%);
   }
   .images-block__right-image_visible{
     animation-name: iphoneAppear;
     animation-duration: 1s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
   }
   @keyframes iphoneAppear {
     0% {
-      transform: translate(200%, 100%);
+      opacity: 0;;
+      transform: scale(0);
+      transform: translate(170%, 100%);
+    }
+    40%{
+      transform: scale(1.3);
     }
     100% {
+      opacity: 1;
       transform: translate(0%, 0%);
+      transform: scale(1);
     }
   }
   
@@ -75,6 +83,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 80px 0px 0px 0px;
     }
     .right-block__title {
       position: relative;
@@ -87,6 +96,12 @@
     }
     .right-block__huge-text {
       font-size: 100px;
+    }
+    .right-block__huge-text {
+      font-size: 70px;
+    }
+    .images-block__right-image {
+      width: 60%;
     }
   }
   

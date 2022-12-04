@@ -10,6 +10,7 @@
     font-size: 60px;
     line-height: 69px;
     letter-spacing: 0.015em;
+    text-align: center;
   }
   ._icon-click {
     transition: 0.5s;
@@ -26,4 +27,8 @@
     padding: 10px;
     background: rgba(0, 0, 0, 0.5);
   }
-  
+  @media(max-width : 540px){
+    .catalog-navbar__title {
+      font-size: 45px;
+    }
+  }

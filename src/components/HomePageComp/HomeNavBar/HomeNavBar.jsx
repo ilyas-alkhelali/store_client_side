@@ -10,24 +10,27 @@ import cookie from "js-cookie";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Drawer } from "@mui/material";
 import NavBar from "../../UI/NavBar/NavBar";
+import { useFetching } from "../../../customHooks/useFetching";
+import { actions, controllers, CreateFetchApi } from "../../../fetchHandler/CreateFetchApi";
+import { getCookie } from "../../../cookieOperations/getCookie";
 
 const HomeNavBar = () => {
   const goTo = useNavigate();
   const [isLog, setIsLog] = useState(false);
   const [isReg, setIsReg] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [userName, setUserName] = useState("user");
   const [menuIconStyle, setMenuIconStyle] = useState("");
   const { isAuth, setIsAuth } = useContext(AuthContext);
-  const auth = cookie.get("authenticate");
-
+  const[removeFromDb, isLoading, error] = useFetching(async () => {
+    await CreateFetchApi(controllers.auth, actions.removeAccount)
+    .deleteById(JSON.parse(getCookie('user')))
+  })
   const logout = () => {
     setIsAuth(false);
-    cookie.set("authenticate", JSON.stringify(false), {
-      expires: 3,
-      secure: true,
-      sameSite: "strict",
-      path: "/",
-    });
+    cookie.remove('user')
+    cookie.remove('jwt');
+    cookie.remove('authenticate');
   };
   const loginOpenHandler = () => {
     setIsLog(true);
@@ -47,11 +50,21 @@ const HomeNavBar = () => {
     setIsOpen(false);
     setMenuIconStyle("");
   };
-
+  const removeAccount = () => {
+    let isRemove = window.confirm("Remove your account?");
+    if(isRemove){
+      removeFromDb();
+      logout();
+    }
+  }
+console.log(userName)
   return (
     <>
       <NavBar>
-        <div className="navbar__logo" onClick={() => goTo("/store_client_side")}>
+        <div
+          className="navbar__logo"
+          onClick={() => goTo("/store_client_side")}
+        >
           <AppleIcon fontSize="large" />
         </div>
 
@@ -78,16 +91,22 @@ const HomeNavBar = () => {
             </div>
             <div
               className="menu__item"
-              onClick={() => goTo(`/store_client_side/catalog/${"Apple Watch"}`)}
+              onClick={() =>
+                goTo(`/store_client_side/catalog/${"Apple Watch"}`)
+              }
             >
               Apple Watch
             </div>
           </div>
           <div className="menu__auth-content">
             {isAuth ? (
-              <div className="menu__item" onClick={() => logout()}>
+             <>
+              <div className="menu__item" onClick={() => removeAccount()}>{userName.toUpperCase()}</div>
+               <div className="menu__item" onClick={() => logout()}>
                 Log out
               </div>
+             </>
+              
             ) : (
               <>
                 <div className="menu__item" onClick={() => setIsLog(true)}>
@@ -128,13 +147,17 @@ const HomeNavBar = () => {
                 </div>
                 <div
                   className="menu__item"
-                  onClick={() => goTo(`/store_client_side/catalog/${"MacBook"}`)}
+                  onClick={() =>
+                    goTo(`/store_client_side/catalog/${"MacBook"}`)
+                  }
                 >
                   MacBook
                 </div>
                 <div
                   className="menu__item"
-                  onClick={() => goTo(`/store_client_side/catalog/${"Apple Watch"}`)}
+                  onClick={() =>
+                    goTo(`/store_client_side/catalog/${"Apple Watch"}`)
+                  }
                 >
                   Apple Watch
                 </div>
@@ -164,7 +187,7 @@ const HomeNavBar = () => {
         </div>
 
         <ModalWindow isActive={isLog} setIsActive={setIsLog}>
-          <LoginForm setIsActive={setIsLog} />
+          <LoginForm setIsActive={setIsLog} userName={userName} setUserName={setUserName}/>
         </ModalWindow>
         <ModalWindow isActive={isReg} setIsActive={setIsReg}>
           <RegisterForm setIsActive={setIsReg} />

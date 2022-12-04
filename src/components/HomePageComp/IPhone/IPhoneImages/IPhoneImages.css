@@ -8,10 +8,10 @@
     height: 60%;
     position: relative;
     bottom: 0;
-    transform: translate(0%, 150%);
+    transform: translate(0%, 100%);
   }
   .iphone-images-block__item_visible {
-    animation: iphone-from-bootom 0.8s;
+    animation: iphone-from-bootom 0.8s 0.5s;
     animation-fill-mode: forwards;
   }
   .iphone-images-block__item_big {
@@ -19,10 +19,10 @@
     height: 70%;
     position: relative;
     bottom: 0;
-    transform: translate(0%, 150%);
+    transform: translate(0%, 100%);
   }
   .iphone-images-block__item_big_visible {
-    animation: iphone-from-bootom 1.8s;
+    animation: iphone-from-bootom 1.8s 0.5s;
     animation-fill-mode: forwards;
   }
   .iphone-images-block__item_2-items {
@@ -30,10 +30,10 @@
     height: 60%;
     position: relative;
     bottom: 0;
-    transform: translate(0%, 150%);
+    transform: translate(0%, 100%);
   }
   .iphone-images-block__item_2-items_visible {
-    animation: iphone-from-bootom 1.3s;
+    animation: iphone-from-bootom 1.3s 0.5s;
     animation-fill-mode: forwards;
   }
   @media (max-width: 912px) {
@@ -59,9 +59,16 @@
   }
   @keyframes iphone-from-bootom {
     0% {
-      transform: translate(0%, 150%);
+      transform: scale(0);
+      opacity: 0;
+      transform: translate(0%, 100%);
+    }
+    50%{
+      transform: scale(1.1);
     }
     100% {
+      opacity: 1;
+      transform: scale(1);
       transform: translate(0%, 0%);
     }
   }

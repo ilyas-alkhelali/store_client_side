@@ -98,7 +98,7 @@ const Catalog = ({ typeName }) => {
                 setSearchQuery={setSearchQuery}
               />
               {isAllLoading || isByTypeLoading 
-                ? <div className="_loader">
+                ? <div className="loader">
                     <CircularProgress color="success" />
                   </div>
                 : products.length == 0

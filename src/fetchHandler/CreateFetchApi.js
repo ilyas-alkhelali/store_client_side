@@ -10,6 +10,7 @@ export const controllers = {
 export const actions = {
   register: "register",
   login: "login",
+  removeAccount: "removeAccount",
   getAllProducts: "getAllProducts",
   getProductById: "getProductById",
   getProductsByTypeName: "getProductsByTypeName",

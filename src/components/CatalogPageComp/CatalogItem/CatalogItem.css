@@ -90,4 +90,17 @@
       flex: 0 0 100%;
     }
   }
+  @media (max-width: 330px){
+    .catalog-block__button {
+      padding: 5px 10px;
+      margin: 15px 0px;
+    }
+    .catalog-block__active-content {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0.055em;
+      padding: 0px 0px 20px 0px;
+    }
+  }
   

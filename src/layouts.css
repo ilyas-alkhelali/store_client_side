@@ -9,10 +9,19 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 100px 0px 0px 0px;
     width: 100%;
     height: auto;
-    color: black;
-    font-size: 40px;
+    color: red;
+    font-size: 30px;
+    margin: 20px 10px;
     font-weight: 900;
+  }
+  ._loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin: 20px 0px;
   }

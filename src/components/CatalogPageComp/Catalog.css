@@ -2,12 +2,10 @@
     margin: 0 auto;
     padding: 140px 0px 120px 0px;
   }
-  ._loader {
+  .loader {
   display: flex;
   justify-content: center;
   padding: 70px 0px 0px 0px;
-  }
-  .catalog-block__container {
   }
   .catalog-block__content {
     display: flex;

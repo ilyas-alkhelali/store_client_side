@@ -1,4 +1,6 @@
 .product {
     background: linear-gradient(64.21deg, #3f4440 0%, #cecece 90.97%);
   }
-  
+  ._custom_loader{
+    margin: 250px 0px;
+  }

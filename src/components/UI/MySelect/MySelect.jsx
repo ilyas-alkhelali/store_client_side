@@ -16,7 +16,7 @@ export default function MySelect({ options, defaultValue, value, onChange }) {
           id="demo-simple-select-standard"
           value={value}
           onChange={(event) => onChange(event.target.value)}
-          label="Age"
+          label={defaultValue}
         >
           {options.map((option) => (
             <MenuItem

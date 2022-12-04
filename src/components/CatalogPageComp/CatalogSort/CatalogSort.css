@@ -8,7 +8,7 @@
   @media (max-width: 594px) {
     .sort-block {
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: center;
     }
     .sort-block__search {

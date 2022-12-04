@@ -1,6 +1,11 @@
 .offer-text-block__item {
     padding: 100px 20px 0px 20px;
     width: 33%;
+    opacity: 0;
+  }
+  .offer-text-block__item_visible{
+    animation: text-block-visible 1s;
+    animation-fill-mode: forwards;
   }
   .offer-text-block__item_last {
     padding: 100px 0px 0px 0px;
@@ -31,4 +36,12 @@
       width: 100%;
     }
   }
-  
+  @keyframes text-block-visible {
+    0%{
+      opacity: 0;
+    }
+
+    100%{
+      opacity: 1;
+    }
+  }

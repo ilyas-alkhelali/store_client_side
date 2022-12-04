@@ -18,10 +18,8 @@ const RouterHandler = () => {
     if (auth != undefined) {
       if (JSON.parse(auth) == true) {
         setIsAuth(true);
-        console.log("true");
       } else {
         setIsAuth(false);
-        console.log(false);
       }
     }
   }, [isAuth]);

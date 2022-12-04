@@ -37,12 +37,12 @@ const RightTextBlock = () => {
           <ArrowRightAltIcon sx={{ fontSize: 40, ml: 2 }} />
         </div>
       </div>
+      <div ref={trakingElement}></div>
       <img
         src={iphonePicture}
         alt={"load"}
         className={`images-block__right-image${imageStyle}`}
       />
-      <div ref={trakingElement}></div>
     </div>
   );
 };

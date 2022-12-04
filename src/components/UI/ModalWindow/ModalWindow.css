@@ -23,9 +23,28 @@
     padding: 20px;
     background: white;
     transition: 1s;
-    width: 50vw;
+    width: 30vw;
   }
   ._content_active {
     transform: scale(1);
+  }
+  @media(max-width: 1140px){
+    .modal_content {
+      width: 35vw;
+    }
+  }  @media(max-width: 878px){
+    .modal_content {
+      width: 50vw;
+    }
+  }
+  @media(max-width: 608px){
+    .modal_content {
+      width: 70vw;
+    }
+  }
+  @media(max-width: 434px){
+    .modal_content {
+      width: 90vw;
+    }
   }
   

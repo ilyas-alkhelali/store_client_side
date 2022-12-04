@@ -1,13 +1,30 @@
 .macbook-commercial-block__macbook-image-block {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    width: 100%;
-    height: auto;
-  }
-  .macbook-image-block__image {
-    position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
   width: 100%;
   height: auto;
+}
+.macbook-image-block__image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  transform: translate(-120%, 0%);
+}
+.macbook-image-block__image_visible {
+  animation: macbook_slider 1s 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes macbook_slider {
+  0%{
+      opacity: 0;
+      transform: translate(-120%, 0%);
   }
-  
+  50%{
+    opacity: 0.3;
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}

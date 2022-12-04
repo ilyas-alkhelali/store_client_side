@@ -7,6 +7,7 @@ import {
   CreateFetchApi,
 } from "../../../fetchHandler/CreateFetchApi";
 import { useFetching } from "../../../customHooks/useFetching";
+import { CircularProgress } from "@mui/material";
 
 const RegisterForm = ({ setIsActive }) => {
 
@@ -29,9 +30,9 @@ const RegisterForm = ({ setIsActive }) => {
 
   return (
     <>
-    {error && <div className="form-block">{error}</div>}
+    {error && <div className="_error">{error}</div>}
     {isLoading 
-    ? <div className="form-block"></div>
+    ? <div className="_loader"><CircularProgress /></div>
     : <form className="form-block">
     <div className="form-block__title">Sign Up</div>
     <div className="from-block__form-group">
