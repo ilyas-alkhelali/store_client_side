@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/store_client_side/static/css/main.8009be57.css",
-    "main.js": "/store_client_side/static/js/main.1aea10fd.js",
+    "main.js": "/store_client_side/static/js/main.69e46496.js",
     "static/media/IphonePicture.png": "/store_client_side/static/media/IphonePicture.0fbdf300e3b566f8e4dd.png",
     "static/media/testPic.png": "/store_client_side/static/media/testPic.ac3f298a8edb5d427a04.png",
     "static/media/AppleWatchFirst.png": "/store_client_side/static/media/AppleWatchFirst.cdb38dbeff01d1793bc5.png",
@@ -14,10 +14,10 @@
     "static/media/fourthIPhoneImCommer.png": "/store_client_side/static/media/fourthIPhoneImCommer.f33e24e735f63b127e6a.png",
     "index.html": "/store_client_side/index.html",
     "main.8009be57.css.map": "/store_client_side/static/css/main.8009be57.css.map",
-    "main.1aea10fd.js.map": "/store_client_side/static/js/main.1aea10fd.js.map"
+    "main.69e46496.js.map": "/store_client_side/static/js/main.69e46496.js.map"
   },
   "entrypoints": [
     "static/css/main.8009be57.css",
-    "static/js/main.1aea10fd.js"
+    "static/js/main.69e46496.js"
   ]
 }
